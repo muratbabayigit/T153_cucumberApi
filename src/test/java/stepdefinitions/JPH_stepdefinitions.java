@@ -8,10 +8,8 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.jupiter.api.Assertions;
 import utilities.ConfigReader;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class JPH_stepdefinitions {
    String url="";
