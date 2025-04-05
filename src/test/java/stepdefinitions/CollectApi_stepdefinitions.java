@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import utilities.ConfigReader;
@@ -35,4 +36,11 @@ public class CollectApi_stepdefinitions {
     public void kullaniciDonenCevabiYazdirir() {
         response.prettyPrint();
     }
+
+    @When("kullanici sorgu icin query parametrelerine {string} olarak {string}")
+    public void kullaniciSorguIcinQueryParametrelerineOlarak(String qp1Key, String qp1Value) {
+        url=url+"?"+qp1Key+"="+qp1Value;
+    }
+
+
 }
